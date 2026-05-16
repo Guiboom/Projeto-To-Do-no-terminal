@@ -171,7 +171,6 @@ Escolha uma opção:""")
                 time.sleep(1)
             limpar_tela()
 
-
         if escolha == 5: #Sair
             limpar_tela()
             with open("tarefas.json", "w") as file:
@@ -185,8 +184,5 @@ Escolha uma opção:""")
             limpar_tela()
             break
             
-
-
-
     except ValueError:
         print("Digite uma opção valida()")
