@@ -41,7 +41,6 @@ def listar():#Lista as tarefas
             print(f"{i+1} - (X) |{tarefas[i][0]}| - {tarefas[i][2]} {tarefas[i][3]}")
 
 def limpar_tela():
-    # Verifica se o sistema é Windows ('nt') ou Linux/macOS ('posix')
     if os.name == 'nt':
         os.system('cls')
     else:
