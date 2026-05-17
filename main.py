@@ -66,7 +66,7 @@ def definir_prioridade(chc):
     return chc
 
 
-
+ 
 while True:
     try:
         escolha = int(
