@@ -186,3 +186,5 @@ Escolha uma opção:""")
             
     except ValueError:
         print("Digite uma opção valida()")
+        time.sleep(1)
+        limpar_tela()
