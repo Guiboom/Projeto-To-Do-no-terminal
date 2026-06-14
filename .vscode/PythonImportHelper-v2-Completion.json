@@ -1,0 +1,83 @@
+[
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "datetime",
+        "description": "datetime",
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "listar",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def listar():#Lista as tarefas\n    for i in range(len(tarefas)):\n        if not tarefas[i][1]:\n            print(f\"{i+1} - ( ) |{tarefas[i][0]}| - DATA({tarefas[i][2]}) | PRIORIDADE({tarefas[i][3]})\")\n        else:\n            print(f\"{i+1} - (X) |{tarefas[i][0]}| - {tarefas[i][2]} {tarefas[i][3]}\")\ndef limpar_tela():\n    if os.name == 'nt':\n        os.system('cls')\n    else:",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "limpar_tela",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def limpar_tela():\n    if os.name == 'nt':\n        os.system('cls')\n    else:\n        os.system('clear')\ndef data_e_hora_atual():\n    data = datetime.datetime.now().strftime(\"%d/%m/%Y %H:%M\")\n    return data\ndef definir_prioridade(chc):\n    try:",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "data_e_hora_atual",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def data_e_hora_atual():\n    data = datetime.datetime.now().strftime(\"%d/%m/%Y %H:%M\")\n    return data\ndef definir_prioridade(chc):\n    try:\n        if chc == '1':\n            chc = \"Urgente\"\n        elif chc == '2':\n            chc = \"Média\"\n        elif chc == '3':",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "definir_prioridade",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def definir_prioridade(chc):\n    try:\n        if chc == '1':\n            chc = \"Urgente\"\n        elif chc == '2':\n            chc = \"Média\"\n        elif chc == '3':\n            chc = \"Baixa\"\n        else:\n            chc = \"Prioridade não definida\"",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "tarefas",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "tarefas = list()\n#tenta abrir o arquivo\ntry:\n    with open(\"tarefas.json\", \"r\") as file:\n        tarefas = json.load(file)\n    print(\"Tarefas carregadas!\")\nexcept FileNotFoundError:\n    tarefas = []\n    print(\"Arquivo não encontrado. Uma nova lista será criada ao sair.\")\nexcept json.JSONDecodeError:",
+        "detail": "main",
+        "documentation": {}
+    }
+]
